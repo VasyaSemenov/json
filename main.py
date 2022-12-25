@@ -30,6 +30,15 @@ data = {
 for i in range(100):
     data['users'].append(User().__dict__)
 
-write(data, 'data.json')
+# write(data, 'data.json')
 
 
+n_data = read('data.json')
+
+print(n_data['users'][3])
+
+g = User()
+g.name = n_data['users'][0]['name']
+
+print(g.name)
+input()
